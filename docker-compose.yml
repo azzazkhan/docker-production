@@ -6,7 +6,7 @@ services:
         ports:
             - '80:80'
             - '443:443'
-            - '8080:8080'
+            - '8000:8000'
         environment:
             CF_DNS_API_TOKEN: ${CLOUDFLARE_TOKEN}
             TRAEFIK_CERTIFICATESRESOLVERS_cloudflare_ACME_EMAIL: ${LETS_ENCRYPT_EMAIL}
