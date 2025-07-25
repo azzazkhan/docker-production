@@ -24,6 +24,10 @@ entryPoints:
     websecure:
         address: :443
 
+    # This port is opened for direct HTTP traffic access (personal usage)
+    external:
+        address: :8080
+
 accessLog:
     format: common
     filePath: /var/log/traefik/access.log
