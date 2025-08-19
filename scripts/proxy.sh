@@ -259,7 +259,7 @@ systemctl enable nginx.service
 
 # Generate a secure DH Param for NGINX (will take some time)
 
-openssl dhparam -out /etc/nginx/dhparams.pem 4096
+openssl dhparam -out /etc/nginx/dhparams.pem 2048
 
 # Add GZIP compression configuration
 
