@@ -18,4 +18,4 @@ scp docker.zip deployer@"$REMOTE_HOST":docker.zip
 
 rm -rf docker.zip
 
-ssh -t deployer@"$REMOTE_HOST" "unzip docker.zip -d docker && cd docker && bash scripts/setup.sh && docker compose pull && docker compose -f docker-compose.http.yml up -d traefik"
+ssh -t deployer@"$REMOTE_HOST" "unzip docker.zip -d docker && rm -f docker.zip && cd docker && bash scripts/setup.sh && docker compose pull && docker compose -f docker-compose.http.yml up -d traefik"
