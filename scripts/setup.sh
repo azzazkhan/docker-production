@@ -13,6 +13,7 @@ echo "✅ Created required Docker networks"
 if [[ ! -f .env ]]; then
     cp .env.example .env
     sed -i "s/MYSQL_ROOT_PASSWORD=.*/MYSQL_ROOT_PASSWORD=$(pwgen -cnsBv 20 1)/" .env
+    sed -i "s/POSTGRES_ROOT_PASSWORD=.*/POSTGRES_ROOT_PASSWORD=$(pwgen -cnsBv 20 1)/" .env
 
     echo "✅ Created default environment configuration file"
 fi
