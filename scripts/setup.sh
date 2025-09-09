@@ -39,4 +39,7 @@ if [[ ! -f volumes/traefik/certs/acme.json ]]; then
     echo "✅ Created Traefik SSL certificates store"
 fi
 
+mkdir -p volumes/pgadmin/data
+sudo chown -R 5050:5050 volumes/pgadmin/data
+
 sudo chmod 600 volumes/traefik/certs/acme.json
