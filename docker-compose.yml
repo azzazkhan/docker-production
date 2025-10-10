@@ -59,6 +59,8 @@ services:
             MYSQL_USER: pma
             MYSQL_PASSWORD: pmapass
             MYSQL_ALLOW_EMPTY_PASSWORD: false
+        ports:
+            - 3306:3306
         volumes:
             - ./volumes/mysql/data:/var/lib/mysql
             - ./volumes/mysql/dump:/opt/mysql/dump
@@ -82,6 +84,8 @@ services:
             POSTGRES_DB: pgadmin
             POSTGRES_USER: admin
             POSTGRES_PASSWORD: password
+        ports:
+            - 5432:5432
         volumes:
             - ./volumes/postgresql/data:/var/lib/postgresql/data
         networks:
@@ -95,6 +99,8 @@ services:
         image: redis:7.4-alpine
         container_name: redis
         restart: always
+        ports:
+            - 6379:6379
         volumes:
             - ./volumes/redis/data:/data
         networks:
