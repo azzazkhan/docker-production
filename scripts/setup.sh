@@ -28,6 +28,7 @@ fi
 # Create access log file for Traefik as Docker mount point
 if [[ ! -f volumes/traefik/access.log ]]; then
     touch volumes/traefik/access.log
+    touch volumes/traefik/traefik.log
 
     echo "✅ Created Traefik access log file"
 fi
