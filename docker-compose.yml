@@ -169,6 +169,7 @@ services:
         environment:
             PGADMIN_DEFAULT_EMAIL: admin@pgadmin.org
             PGADMIN_DEFAULT_PASSWORD: password
+            PGADMIN_CONFIG_ENHANCED_COOKIE_PROTECTION: 'False'
         volumes:
             - ./volumes/pgadmin/data:/var/lib/pgadmin
         networks:
